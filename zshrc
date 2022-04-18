@@ -33,15 +33,15 @@ autoload -Uz colors && colors
 source "$ZDOTDIR/zsh-functions"
 
 # Normal files to source
-zsh_add_file "10_homebin.cfg"
-zsh_add_file "20_go.cfg"
-zsh_add_file "20_js.cfg"
-zsh_add_file "20_python.cfg"
-zsh_add_file "20_pyenv.cfg"
 zsh_add_file "zsh-exports"
 zsh_add_file "zsh-vim-mode"
 zsh_add_file "zsh-aliases"
 zsh_add_file "zsh-prompt"
+
+for f in ${ZDOTDIR}/*cfg
+do
+    source ${f}
+done
 
 # Plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
