@@ -38,7 +38,7 @@ zsh_add_file "zsh-vim-mode"
 zsh_add_file "zsh-aliases"
 zsh_add_file "zsh-prompt"
 
-for f in ${ZDOTDIR}/*cfg
+for f in ${ZDOTDIR}/cfg/*cfg
 do
     source ${f}
 done
